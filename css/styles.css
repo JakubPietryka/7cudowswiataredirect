@@ -1,0 +1,288 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    background: linear-gradient(to bottom, #799ae0 0%, #bb80d1 100%);
+    color: #444;
+}
+
+video {
+    width: 30vw;
+    height: auto;
+}
+
+header h1 {
+    animation: fadeIn 2s ease-in-out;
+    font-size: 3em;
+    color: #222;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a {
+    animation: slideIn 1s ease-in-out;
+    transition:
+        background-color 0.3s,
+        color 0.3s,
+        transform 0.3s;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+header {
+    background-color: #ffffff;
+    color: #222;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #222;
+    text-decoration: none;
+    padding: 12px 24px;
+    border: 2px solid #222;
+    border-radius: 25px;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #222;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+main {
+    padding: 50px;
+    flex: 1;
+    text-align: left;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px;
+    border-radius: 15px;
+}
+
+footer {
+    background-color: #ffffff;
+    color: #222;
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-container {
+    width: 50vw;
+    height: 50vw;
+    margin: auto;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mySlides img {
+    height: 100%;
+    width: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.mySlides {
+    display: none;
+    animation: slideIn 1s ease-in-out;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+    }
+
+    main {
+        padding: 40px;
+        margin: 20px;
+        align-items: left;
+        align-content: left;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    #spis ol li a {
+        color: #222;
+        text-decoration: none;
+        padding: 12px 24px;
+        border: 2px solid #222;
+        border-radius: 25px;
+        background-color: transparent;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    #spis ol li {
+        margin-bottom: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 50%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+    }
+
+    header,
+    footer {
+        padding: 20px 0;
+    }
+
+    main {
+        padding: 30px;
+        margin: 15px;
+
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li a {
+        padding: 8px 16px;
+    }
+
+    main {
+        padding: 20px;
+        margin: 10px;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #e0eafc;
+    color: #222;
+}
+
+ol {
+    margin: 30px auto;
+    padding-left: 40px;
+    color: #444;
+}
+
+@media (max-width: 1024px) {
+    .map-container iframe {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .map-container iframe {
+        height: 300px;
+    }
+
+    table,
+    th,
+    td {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container iframe {
+        height: 200px;
+    }
+
+    table,
+    th,
+    td {
+        font-size: 0.8em;
+    }
+
+    main {
+        padding: 15px;
+        margin: 10px;
+        text-align: center;
+    }
+}
